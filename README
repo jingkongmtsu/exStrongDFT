@@ -1,0 +1,42 @@
+This package contains new DFT functionalities developed in Kong's group at
+MTSU.  The functionalities include:
+1. Computation of the Hartree-Fock exchange (HFX) energy density;
+2. Computation of the HFX hole;
+3. B05 and B13, KP16/B13 implementations.
+
+The name exStrongDFT is a composition of exact exchange, strong correlation, 
+and DFT. It is subject to change.
+
+The code was written mainly by Fenglai Liu with design input from Jing Kong
+and Emil Proynov. Emil also help in coding up some of the DFT functionals.
+Yiting Wang wrote the code for the computation of HFX hole.
+
+Note: This initial release of code is (very) experimental. Please feel free 
+to contact me at jing.kong@mtsu.edu if you want to use it.  Your feedback 
+will help us to improve it.
+
+Descriptions:
+
+1. HFX energy density: halfjkrho.cpp, espints.cpp, batchexrhomtrx.cpp. The
+HFX energy density is calculated in halfjkrho.cpp, which calls espints.cpp
+for computing the electrostatic potential of a shell pair. This part of 
+code eventually calls cppints on github, an efficient four-center integral
+package developed by Fenglai. batchexrhomtrx.cpp is to construct the 
+HFX-related part of XC matrix.
+Reference: Liu, Kong, JCTC, https://doi.org/10.1021/acs.jctc.7b00055
+
+2. HFX hole: halfjkrho.cpp, gaussian.cpp, sphereInt.cpp, coefCalculator.cpp.
+doHalfJKRhoXHole in halfjkrho.cpp calls sphereInt the computation of the HFX
+hole value at a given interelectronic distance.
+Reference: Wang, Proynov, Kong, JCP, https://doi.org/10.1063/5.0031995
+
+3. B05 and B13, KP16/B13: All the Fortran files (*.f). Note that 'kp14' was
+used internally for KP16 method because its implementation started in 2014.
+References: 
+B05: Becke, JCP, https://doi.org/10.1063/1.1844493
+B13: Becke, JCP, https://doi.org/10.1063/1.4790598
+KP16/B13: Kong, Proynov, JCTC, https://doi.org/10.1021/acs.jctc.5b00801
+
+
+Jing
+
