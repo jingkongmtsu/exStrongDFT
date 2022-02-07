@@ -24,11 +24,13 @@ code eventually calls cppints on github, an efficient four-center integral
 package developed by Fenglai. batchexrhomtrx.cpp is to construct the 
 HFX-related part of XC matrix.
 Reference: Liu, Kong, JCTC, https://doi.org/10.1021/acs.jctc.7b00055
-
-2. HFX hole: halfjkrho.cpp, gaussian.cpp, sphereInt.cpp, coefCalculator.cpp.
+           Liu, Furlani, Kong, JPC A, https://doi.org/10.1021/acs.jpca.6b10468.
+	2. HFX hole: halfjkrho.cpp, gaussian.cpp, sphereInt.cpp, coefCalculator.cpp.
 doHalfJKRhoXHole in halfjkrho.cpp calls sphereInt the computation of the HFX
 hole value at a given interelectronic distance.
-Reference: Wang, Proynov, Kong, JCP, https://doi.org/10.1063/5.0031995
+References: Wang, Proynov, Kong, JCP, https://doi.org/10.1063/5.0031995
+            Wang, Kong, J. Math Chem., 59, 505 (2021), 
+            https://link.springer.com/article/10.1007/s10910-020-01204-4
 
 3. B05 and B13, KP16/B13: All the Fortran files (*.f). Note that 'kp14' was
 used internally for KP16 method because its implementation started in 2014.
@@ -36,7 +38,27 @@ References:
 B05: Becke, JCP, https://doi.org/10.1063/1.1844493
 B13: Becke, JCP, https://doi.org/10.1063/1.4790598
 KP16/B13: Kong, Proynov, JCTC, https://doi.org/10.1021/acs.jctc.5b00801
+B05 SCF implementation scheme:
+     Proynov, Liu, Shao, Kong, JCP, 136, 034102 (2012)
+     Proynov, Liu, Kong, CPL, 525-526, 150 (2012)
+     Proynov, Shao, Kong, CPL, 493, 381 (2010)
+
+4. Applications:
+   Wang, et al, “Performance of new density functionals of nondynamic 
+        correlation on chemical properties”, JCP, 150, 104101 (2019)
+   Janesko, et al, “Practical Density Functionals beyond the Overdelocalization
+        - Underbinding Zero-Sum Game”, JPCL, 8, 4314 (2017)
+   Kong, et al, “Describing a Strongly Correlated Model System with Density 
+        Functional Theory”, JPCL, 8, 3142 (2017)
+   
+
 
 
 Jing
+
+****
+Jing Kong, Professor, Chemistry/Computational Sciences, 
+Middle Tennessee State University, http://www.mtsu.edu/chemistry/faculty.php?faculty=jkong
+
+
 
